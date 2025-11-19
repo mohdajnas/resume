@@ -24,7 +24,57 @@ body {
   color: #111827;
 }
 
-/* Remove @apply directives that might be causing issues */
+/* Typography */
+h1 {
+  @apply text-4xl md:text-5xl xl:text-7xl font-semibold leading-tight;
+}
+
+h2 {
+  @apply text-3xl md:text-5xl lg:text-6xl xl:text-[65px] font-semibold;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold;
+}
+
+h4 { 
+  @apply text-4xl; 
+}
+
+h5 { 
+  @apply text-xl xl:text-2xl; 
+}
+
+h6 { 
+  @apply text-sm md:text-base xl:text-xl; 
+}
+
+p {
+  color: var(--color-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Utilities */
+.container {
+  @apply w-full max-w-[80rem] mx-auto mt-0 mb-0 py-0 px-5 sm:px-7;
+}
+
+.label {
+  color: var(--color-secondary);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.input {
+  @apply w-full border-b pt-2 pb-2 focus:outline-none;
+  border-bottom-color: var(--color-gray);
+}
+
+.input:focus {
+  border-bottom-color: var(--color-primary);
+}
+
 .text-primary {
   color: var(--color-primary);
 }
