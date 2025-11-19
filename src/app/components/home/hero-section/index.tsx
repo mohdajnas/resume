@@ -9,7 +9,7 @@ const index = () => {
           <div className="flex flex-col gap-4 md:gap-7 max-w-2xl">
             <div>
               <div className="flex items-center gap-8">
-                <h1>I'm Sruthi</h1>
+                <h1>I'm ajnas.</h1>
                 <div className="wave">
                   <Image
                     src={getImgPath("/images/home/banner/wave-icon.svg")}
@@ -20,12 +20,10 @@ const index = () => {
                   />
                 </div>
               </div>
-              <h1>UI/UX Designer</h1>
+              <h1>AI Engineer</h1>
             </div>
             <p className="text-secondary font-normal max-w-md xl:max-w-xl">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. variations of passages of Lorem Ipsum available, but the
-              majority have suffered alteration
+              AI Engineer skilled in machine learning, deep learning, NLP, and generative AI, with hands-on experience building chatbots, computer vision systems, and AI-powered products. Proficient in Python, MLOps, and cloud deployment, with a track record of delivering real-world AI solutions.
             </p>
           </div>
           <Image

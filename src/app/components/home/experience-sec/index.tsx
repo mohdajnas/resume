@@ -3,32 +3,32 @@ import React from 'react';
 const ExperienceSec = () => {
     const experiences = [
         {
-            year: "2018",
-            title: "Junior UX Designer",
-            company: "www.startup.com",
+            year: "2023",
+            title: "AI Marketing Lead",
+            company: "www.adtech@mesce.ac.in",
             type: "Fulltime",
-            description: "Suffered alteration in some form by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum"
+            description: "Led marketing and branding initiatives for AI and tech-focused student events. Designed outreach campaigns that increased engagement and strengthened community presence."
         },
         {
-            year: "2019",
-            title: "Senior UX Designer",
-            company: "www.googly.com",
+            year: "2024",
+            title: "AI Engineer Intern",
+            company: "www.camerininnovate.com",
             type: "Remote",
-            description: "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem"
+            description: "Built AI-driven chatbot and LLM modules for Hospital Information Systems. Automated patient data workflows and assisted in deploying and testing AI models in healthcare environments."
         },
         {
-            year: "2020-2022",
-            title: "Team Lead Designer",
-            company: "www.company.com",
+            year: "2025",
+            title: "AI Developer Intern",
+            company: "www.zoftcares.com",
             type: "Fulltime",
-            description: "Handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated"
+            description: "Improved real-time computer vision models for workplace hazard detection. Integrated AI components into safety systems to enhance accuracy and reliability."
         },
         {
-            year: "2023+",
-            title: "Team Lead Designer",
-            company: "www.latest.com",
+            year: "2025+",
+            title: "Junior AI Engineer",
+            company: "www.zoftcares.com",
             type: "Fulltime",
-            description: "Release of Letraset sheets containing Lorem Ipsum passages and more recently with desktop publishing software"
+            description: "Developed and deployed LLM-based chatbots and scalable AI services using RabbitMQ and RESTful APIs. Collaborated with team members to optimize model performance and deliver production-ready AI solutions."
         }
     ];
 

@@ -1,40 +1,40 @@
 {
   "workData": [
     {
-      "image": "/images/work/work-img-1.jpg",
-      "title": "Mug Sticker Designing",
-      "client": "John Honnai",
-      "slug": "mug-sticker-designing"
+      "image": "/images/work/step6.png",
+      "title": "MedNote",
+      "description": "AI Discharge Summary Generator",
+      "githubUrl": "https://github.com/mohdajnas/MediNoteBT-demo"
     },
     {
-      "image": "/images/work/work-img-2.jpg",
-      "title": "Mobile App Design",
-      "client": "John Honnai",
-      "slug": "mobile-app-design"
+      "image": "/images/work/sociup.png",
+      "title": "SociUP",
+      "description": "Social Media Campaigner",
+      "githubUrl": "https://github.com/mohdajnas/campaign.git"
     },
     {
-      "image": "/images/work/work-img-3.jpg",
-      "title": "Fashion Website Template",
-      "client": "John Honnai",
-      "slug": "fashion-website-template"
+      "image": "/images/work/work3.png",
+      "title": "Thadhesh.Ai",
+      "description": "Panchayat Raj Custom Domain Chatbot",
+      "githubUrl": "https://github.com/mohdajnas/tadhesh.git"
     },
     {
-      "image": "/images/work/work-img-4.jpg",
-      "title": "Book Cover Design",
-      "client": "John Honnai",
-      "slug": "book-cover-design"
+      "image": "/images/work/work4.png",
+      "title": "Survey SahAi",
+      "description": "Automatic Survey Analysis Tool",
+      "githubUrl": "https://github.com/mohdajnas/SurveySahAi.git"
     },
     {
-      "image": "/images/work/work-img-5.jpg",
-      "title": "Mobile App Design",
-      "client": "John Honnai",
-      "slug": "mobile-app-design"
+      "image": "/images/work/work5.png",
+      "title": "Violence Detection Platform",
+      "description": "CLIP Model With Real-Time Violence Detection",
+      "githubUrl": "https://github.com/mohdajnas/violence-detection.git"
     },
     {
-      "image": "/images/work/work-img-6.jpg",
-      "title": "Mug Sticker Designing",
-      "client": "John Honnai",
-      "slug": "mug-sticker-designing"
+      "image": "/images/work/work6.png",
+      "title": "Invoice Generator",
+      "description": "Custom Invoice Generation Tool",
+      "githubUrl": "https://github.com/mohdajnas/invoice-generator.git"
     }
   ]
 }

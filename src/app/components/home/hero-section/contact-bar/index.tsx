@@ -31,12 +31,15 @@ const ContactBar = () => {
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-1.5 md:gap-5 lg:gap-11">
               {contactBarData?.contactItems?.map(
                 (value: any, index: number) => (
+  
                   <Link
                     key={index}
-                    onClick={(e) => e.preventDefault()}
-                    href={"#!"}
+                    href={value?.link}
+                    target={value?.link?.startsWith("http") ? "_blank" : undefined}
+                    rel={value?.link?.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="flex items-center gap-2 lg:gap-4 text-sm md:text-base"
                   >
+
                     <Image
                       src={getImgPath(value?.icon)}
                       alt={value?.type}
@@ -58,9 +61,13 @@ const ContactBar = () => {
               {contactBarData?.socialItems?.map((value: any, index: number) => (
                 <Link
                   key={index}
-                  onClick={(e) => e.preventDefault()}
-                  href={"#!"}
+                  href={value?.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
                 >
+
+
                   <Image
                     src={getImgPath(value?.icon)}
                     alt={value?.platform}

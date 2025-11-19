@@ -3,85 +3,95 @@
     "contactItems": [
       {
         "type": "email",
-        "label": "hello@imsruthi.com",
+        "label": "mohdajnas@yahoo.com",
         "icon": "/images/icon/mail-icon.svg",
-        "link": "mailto:hello@imsruthi.com"
+        "link": "mailto:mohdajnas@yahoo.com"
       },
       {
         "type": "phone",
-        "label": "+901 5588 2500",
+        "label": "+91 97453 22113",
         "icon": "/images/icon/call-icon.svg",
-        "link": "tel:+90155882500"
+        "link": "tel:+919745322113"
       },
       {
         "type": "website",
-        "label": "www.mywebsite.com",
+        "label": "www.ajnas.online",
         "icon": "/images/icon/web-icon.svg",
-        "link": "https://www.mywebsite.com"
+        "link": "https://www.ajnas.online"
       }
     ],
     "socialItems": [
       {
-        "platform": "dribbble",
-        "icon": "/images/icon/dribble-icon.svg",
-        "link": "https://dribbble.com"
-      },
-      {
         "platform": "linkedin",
         "icon": "/images/icon/linkedin-icon.svg",
-        "link": "https://linkedin.com"
+        "link": "https://www.linkedin.com/in/mohmdajnaskp/"
       },
       {
         "platform": "facebook",
         "icon": "/images/icon/facebook-icon.svg",
-        "link": "https://facebook.com"
+        "link": "https://www.facebook.com/ajnaaskp"
+      },
+      {
+        "platform": "twitter",
+        "icon": "/images/icon/twitter-icon.svg",
+        "link": "https://x.com/AjnasKP11"
+      },
+      {
+        "platform": "instagram",
+        "icon": "/images/icon/instagram-icon.svg",
+        "link": "https://instagram.com/mohdajnaas"
+      },
+      {
+        "platform": "github",
+        "icon": "/images/icon/github-icon.svg",
+        "link": "https://github.com/mohdajnas"
       }
     ]
   },
   "educationData": {
     "education": [
       {
-        "title": "Lipsum Collage - 2010",
-        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form Koramangala collage."
+        "title": "SSLC - MESHSS - 2016-2019",
+        "description": "Completed SSLC with a strong academic foundation, actively participating in school-level activities and building core analytical and communication skills."
       },
       {
-        "title": "Master Diploma - 2012",
-        "description": "Combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable."
+        "title": "NSQF - Auto Service Technician (Level 4) - 2019-2021",
+        "description": "Completed vocational training in automotive service, gaining hands-on experience in vehicle maintenance, diagnostics, and technical problem-solving through a structured NSQF curriculum."
       },
       {
-        "title": "Master in User Experience - 2014",
-        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+        "title": "B.Tech in AI & Data Science - 2021-2025",
+        "description": "Pursued a comprehensive AI and Data Science program covering machine learning, deep learning, algorithms, and data analytics, with practical experience through real-world projects and industry internships."
       }
     ],
     "skills": [
       {
-        "name": "Figma",
-        "icon": "/images/home/education-skill/figma-icon.svg",
+        "name": "Artificial Intelligence",
+        "icon": "/images/home/education-skill/ai-icon.svg",
         "rating": 5
       },
       {
-        "name": "Photoshop",
-        "icon": "/images/home/education-skill/photoshop-icon.svg",
+        "name": "Data Science",
+        "icon": "/images/home/education-skill/data-icon-2.svg",
         "rating": 5
       },
       {
-        "name": "Sketch",
-        "icon": "/images/home/education-skill/sketch-icon.svg",
+        "name": "Python",
+        "icon": "/images/home/education-skill/python-icon.svg",
         "rating": 4
       },
       {
-        "name": "Adobe XD",
-        "icon": "/images/home/education-skill/adobe-icon.svg",
+        "name": "R",
+        "icon": "/images/home/education-skill/r-icon.svg",
         "rating": 4
       },
       {
-        "name": "Framer",
-        "icon": "/images/home/education-skill/framer-icon.svg",
+        "name": "Data Visualization Tools",
+        "icon": "/images/home/education-skill/datavv-icon.svg",
         "rating": 5
       },
       {
-        "name": "Invasion",
-        "icon": "/images/home/education-skill/invision-icon.svg",
+        "name": "AWS",
+        "icon": "/images/home/education-skill/aws-icon.svg",
         "rating": 3
       }
     ]
@@ -89,28 +99,36 @@
   "contactLinks": {
     "socialLinks": [
       {
-        "title": "Dribble",
-        "href": "/"
-      },
-      {
         "title": "Facebook",
-        "href": "/"
+        "href": "https://www.facebook.com/ajnaaskp"
       },
       {
         "title": "LinkedIn",
-        "href": "/"
+        "href": "https://www.linkedin.com/in/mohmdajnaskp/"
+      },
+      {
+        "title": "Twitter",
+        "href": "https://x.com/AjnasKP11"
+      },
+      {
+        "title": "Instagram",
+        "href": "https://instagram.com/mohdajnaas"
+      },
+      {
+        "title": "Github",
+        "href": "https://github.com/mohdajnas"
       }
     ],
     "contactInfo": [
       {
         "type": "email",
-        "label": "hello@imsruthi.com",
-        "link": "mailto:hello@imsruthi.com"
+        "label": "mohdajnas@yahoo.com",
+        "link": "mailto:mohdajnas@yahoo.com"
       },
       {
         "type": "phone",
-        "label": "+901 5588 2500",
-        "link": "tel:+90155882500"
+        "label": "+91 97453 22113",
+        "link": "tel:+919745322113"
       }
     ]
   }
