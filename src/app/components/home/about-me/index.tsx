@@ -35,19 +35,18 @@ const AboutMe = () => {
 
               <div className="w-full lg:max-w-2xl flex-1">
                 <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable. If you are going to use a passage of
-                  Lorem Ipsum, you need to be sure there isn't anything
-                  embarrassing hidden in the middle of text.
+                AI Engineer and Data Scientist with hands-on experience in machine learning, deep learning, natural language
+                processing (NLP), and generative AI. Skilled in MLOps, cloud deployment, and AI product development with
+                expertise in Python, R, and SQL. Proven ability to design and deploy AI-powered solutions for real-world
+                problems, including chatbots, computer vision, and large language models. Strong collaborative mindset with
+                leadership experience in student organizations, driving innovation and community engagement.
                 </p>
 
                 <div className="grid grid-cols-3 py-10 xl:py-16 gap-5 border-b border-mistGray">
                   {[
-                    { count: "06", label: "Years of experience" },
+                    { count: "1+", label: "Years of experience" },
                     { count: "165+", label: "Happy Clients" },
-                    { count: "1800+", label: "Project Completed" },
+                    { count: "15+", label: "Project Completed" },
                   ].map((item, i) => (
                     <div key={i}>
                       <h3>{item.count}</h3>
