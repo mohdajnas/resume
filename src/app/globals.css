@@ -1,8 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Custom CSS variables */
+/* Perfect Tailwind v4 setup with CSS variables */
 :root {
   --color-primary: #FE4300;
   --color-secondary: #868686;
@@ -24,154 +22,244 @@ body {
   color: #111827;
 }
 
-/* Typography */
-h1 {
-  @apply text-4xl md:text-5xl xl:text-7xl font-semibold leading-tight;
-}
+/* Custom utilities using CSS variables */
+@layer utilities {
+  .text-primary {
+    color: var(--color-primary);
+  }
 
-h2 {
-  @apply text-3xl md:text-5xl lg:text-6xl xl:text-[65px] font-semibold;
-}
+  .text-secondary {
+    color: var(--color-secondary);
+  }
 
-h3 {
-  @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold;
-}
+  .bg-softGray {
+    background-color: var(--color-softGray);
+  }
 
-h4 { 
-  @apply text-4xl; 
-}
+  .border-softGray {
+    border-color: var(--color-softGray);
+  }
 
-h5 { 
-  @apply text-xl xl:text-2xl; 
-}
+  .border-mistGray {
+    border-color: var(--color-mistGray);
+  }
 
-h6 { 
-  @apply text-sm md:text-base xl:text-xl; 
-}
+  .border-primary {
+    border-color: var(--color-primary);
+  }
 
-p {
-  color: var(--color-secondary);
-  font-size: 1rem;
-  line-height: 1.5;
-}
+  .hover\:text-primary:hover {
+    color: var(--color-primary);
+  }
 
-/* Utilities */
-.container {
-  @apply w-full max-w-[80rem] mx-auto mt-0 mb-0 py-0 px-5 sm:px-7;
-}
+  .hover\:border-primary:hover {
+    border-color: var(--color-primary);
+  }
 
-.label {
-  color: var(--color-secondary);
-  font-size: 0.875rem;
-  font-weight: 400;
-}
+  .pt-35 {
+    padding-top: 8.75rem;
+  }
 
-.input {
-  @apply w-full border-b pt-2 pb-2 focus:outline-none;
-  border-bottom-color: var(--color-gray);
-}
+  .pb-30 {
+    padding-bottom: 7.5rem;
+  }
 
-.input:focus {
-  border-bottom-color: var(--color-primary);
-}
+  .z-1 {
+    z-index: 1;
+  }
 
-.text-primary {
-  color: var(--color-primary);
-}
+  .z-999 {
+    z-index: 999;
+  }
 
-.text-secondary {
-  color: var(--color-secondary);
-}
-
-.bg-softGray {
-  background-color: var(--color-softGray);
-}
-
-.border-softGray {
-  border-color: var(--color-softGray);
-}
-
-.border-mistGray {
-  border-color: var(--color-mistGray);
-}
-
-.border-primary {
-  border-color: var(--color-primary);
-}
-
-.hover\:text-primary:hover {
-  color: var(--color-primary);
-}
-
-.hover\:border-primary:hover {
-  border-color: var(--color-primary);
-}
-
-/* Custom spacing */
-.pt-35 {
-  padding-top: 8.75rem;
-}
-
-.pb-30 {
-  padding-bottom: 7.5rem;
-}
-
-/* Custom z-index */
-.z-1 {
-  z-index: 1;
-}
-
-.z-999 {
-  z-index: 999;
-}
-
-/* Button animations */
-button {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-button::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  background-color: var(--color-primary);
-  transition: height 0.3s ease;
-  z-index: -1;
-}
-
-button:hover::before {
-  height: 100%;
-}
-
-/* Wave animation */
-.wave {
-  animation-name: wave-animation;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  transform-origin: 70% 70%;
-  display: inline-block;
-}
-
-@keyframes wave-animation {
-  0% { transform: rotate(0.0deg) }
-  10% { transform: rotate(14.0deg) }
-  20% { transform: rotate(-8.0deg) }
-  30% { transform: rotate(14.0deg) }
-  40% { transform: rotate(-4.0deg) }
-  50% { transform: rotate(10.0deg) }
-  60% { transform: rotate(0.0deg) }
-  100% { transform: rotate(0.0deg) }
-}
-
-/* Custom breakpoint utilities */
-@media (min-width: 425px) {
   .xs\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    @media (min-width: 425px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+}
+
+/* Component styles */
+@layer components {
+  .container {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding: 0 1.75rem;
+    }
+  }
+
+  .label {
+    color: var(--color-secondary);
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  .input {
+    width: 100%;
+    border-bottom: 1px solid var(--color-gray);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .input:focus {
+    border-bottom-color: var(--color-primary);
+    outline: none;
+  }
+
+  /* Button animations */
+  button {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  button::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--color-primary);
+    transition: height 0.3s ease;
+    z-index: -1;
+  }
+
+  button:hover::before {
+    height: 100%;
+  }
+
+  /* Wave animation */
+  .wave {
+    animation: wave-animation 2.5s infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+
+  @keyframes wave-animation {
+    0% { transform: rotate(0.0deg) }
+    10% { transform: rotate(14.0deg) }
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate(0.0deg) }
+    100% { transform: rotate(0.0deg) }
+  }
+}
+
+/* Typography using Tailwind's @layer base */
+@layer base {
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h1 {
+      font-size: 4.5rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    h1 {
+      font-size: 5.3125rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 3.75rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h2 {
+      font-size: 4.0625rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.875rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h3 {
+      font-size: 2.25rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h3 {
+      font-size: 3rem;
+    }
+  }
+
+  h4 {
+    font-size: 2.25rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 1280px) {
+    h5 {
+      font-size: 1.5rem;
+    }
+  }
+
+  h6 {
+    font-size: 0.875rem;
+  }
+
+  @media (min-width: 768px) {
+    h6 {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h6 {
+      font-size: 1.25rem;
+    }
+  }
+
+  p {
+    color: var(--color-secondary);
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }
 
