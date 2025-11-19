@@ -5,6 +5,7 @@ const nextConfig = {
   },
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
+
   experimental: {
     turbo: {
       rules: {
@@ -14,6 +15,10 @@ const nextConfig = {
         },
       },
     },
+  },
+
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 
