@@ -4,6 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  NODE_ENV = "production"
+  NETLIFY_DEBUG = "true"
 
 [[redirects]]
   from = "/*"

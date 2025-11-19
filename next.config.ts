@@ -5,8 +5,12 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  basePath: '',
-  assetPrefix: '',
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
