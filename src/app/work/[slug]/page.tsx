@@ -12,29 +12,71 @@ interface WorkItem {
 // This function generates the static paths at build time
 export async function generateStaticParams() {
   try {
-    // In static export mode, we need to read the file directly
-    // You might need to adjust this path based on your build setup
     const fs = require('fs');
     const path = require('path');
     
-    // Try to read from public directory first
-    let workData;
-    try {
-      const filePath = path.join(process.cwd(), 'public', 'data', 'work-data.json');
-      const fileContents = fs.readFileSync(filePath, 'utf8');
-      workData = JSON.parse(fileContents);
-    } catch (error) {
-      // Fallback: return empty array if file can't be read
-      console.warn('Could not read work-data.json for static generation:', error);
-      return [];
+    // Try multiple possible locations
+    const possiblePaths = [
+      path.join(process.cwd(), 'public', 'data', 'work-data.json'),
+      path.join(process.cwd(), 'data', 'work-data.json'),
+      path.join(process.cwd(), 'src', 'data', 'work-data.json'),
+    ];
+    
+    let data = null;
+    let usedPath = '';
+    
+    for (const filePath of possiblePaths) {
+      try {
+        if (fs.existsSync(filePath)) {
+          const fileContents = fs.readFileSync(filePath, 'utf8');
+          data = JSON.parse(fileContents);
+          usedPath = filePath;
+          console.log('Found work-data.json at:', filePath);
+          break;
+        }
+      } catch (err) {
+        continue;
+      }
     }
-
-    return workData.workData.map((work: WorkItem) => ({
-      slug: work.slug,
-    }));
+    
+    if (!data) {
+      console.warn('Could not find work-data.json in any expected location');
+      console.warn('Tried paths:', possiblePaths);
+      // Return a placeholder to prevent build error
+      return [{ slug: 'example-project' }];
+    }
+    
+    // Handle different possible JSON structures
+    const workArray = data.workData || data.works || data;
+    
+    if (!Array.isArray(workArray)) {
+      console.error('work-data.json does not contain an array. Structure:', typeof workArray);
+      return [{ slug: 'example-project' }];
+    }
+    
+    if (workArray.length === 0) {
+      console.warn('work-data.json contains an empty array');
+      return [{ slug: 'example-project' }];
+    }
+    
+    const params = workArray
+      .map((work: WorkItem) => ({
+        slug: work.slug,
+      }))
+      .filter(param => param.slug && typeof param.slug === 'string');
+    
+    console.log('Generated params:', params);
+    
+    if (params.length === 0) {
+      console.warn('No valid slugs found in work data');
+      return [{ slug: 'example-project' }];
+    }
+    
+    return params;
   } catch (error) {
     console.error('Error generating static params:', error);
-    return [];
+    // Return a placeholder to prevent build error
+    return [{ slug: 'example-project' }];
   }
 }
 
@@ -56,13 +98,15 @@ async function getWorkItem(slug: string): Promise<WorkItem | null> {
 }
 
 interface WorkDetailPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 const WorkDetailPage = async ({ params }: WorkDetailPageProps) => {
-  const workItem = await getWorkItem(params.slug);
+  // Await params in Next.js 15
+  const { slug } = await params;
+  const workItem = await getWorkItem(slug);
 
   if (!workItem) {
     return (

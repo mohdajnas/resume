@@ -16,7 +16,7 @@ const AboutMe = () => {
         </div>
 
         <div className="relative z-10">
-          <div className="container">
+          <div className="container sm:px-7">
             <div className="flex items-center justify-between gap-2 border-b border-black pb-7">
               <h2>About Me</h2>
               <p className="text-xl text-primary">( 01 )</p>

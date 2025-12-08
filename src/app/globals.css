@@ -3,16 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* remove any custom-variant line here (handled by tailwind.config.js: darkMode: 'class') */
-
 :root {
   --color-primary: #FE4300;
   --color-secondary: #868686;
   --color-softGray: #F0F0F0;
   --color-mistGray: #D7DCDD;
   --color-gray: #C0D8E0;
-
-  
   --breakpoint-xs: 425px;
 }
 
@@ -25,7 +21,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  /* optional background/text defaults using vars */
   background: white;
   color: #111827;
 }
@@ -46,7 +41,7 @@ button::before {
   height: 0%;
   background-color: var(--color-primary);
   transition: height 0.3s ease;
-  z-index: -1; /* put behind button text */
+  z-index: -1;
 }
 
 button:hover::before {
@@ -73,18 +68,27 @@ button:hover::before {
   100% { transform: rotate( 0.0deg) }
 }
 
-/* Tailwind utility layer using @apply — keep these if your tailwind.config defines used tokens.
-   Otherwise, you can use CSS variables directly in component css. */
-@layer utilities {
+/* Custom component classes - moved to @layer components */
+@layer components {
   .container {
-    @apply w-full max-w-[80rem] mx-auto mt-0 mb-0 py-0 sm:px-7 px-5;
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
+
   .label {
-    /* use variable fallback if text-secondary is not defined in tailwind theme */
     color: var(--color-secondary);
-    font-size: 0.875rem; /* text-sm */
+    font-size: 0.875rem;
     font-weight: 400;
   }
+
   .input {
     width: 100%;
     border-bottom-width: 1px;
@@ -92,43 +96,143 @@ button:hover::before {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
-  /* If you want focus border to use the CSS variable: use an arbitrary value in your HTML class
-     e.g., class="focus:border-[var(--color-primary)] focus:outline-none" on the input element.
-     @apply does not work reliably with arbitrary values, so prefer inline class usage. */
 }
 
-/* base elements — prefer Tailwind utilities in markup for best performance,
-   but these are fallback base styles using @apply where appropriate */
+/* base elements */
 @layer base {
   h1 {
-    @apply text-4xl md:text-5xl xl:text-7xl 2xl:text-[85px] font-semibold leading-tight;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h1 {
+      font-size: 4.5rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    h1 {
+      font-size: 85px;
+    }
   }
 
   h2 {
-    @apply text-3xl md:text-5xl lg:text-6xl xl:text-[65px] font-semibold;
+    font-size: 1.875rem;
+    font-weight: 600;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 3.75rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h2 {
+      font-size: 65px;
+    }
   }
 
   h3 {
-    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 
-  h4 { @apply text-4xl; }
-  h5 { @apply text-xl xl:text-2xl; }
-  h6 { @apply text-sm md:text-base xl:text-xl; }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.875rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h3 {
+      font-size: 2.25rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h3 {
+      font-size: 3rem;
+    }
+  }
+
+  h4 { 
+    font-size: 2.25rem;
+  }
+
+  h5 { 
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 1280px) {
+    h5 {
+      font-size: 1.5rem;
+    }
+  }
+
+  h6 { 
+    font-size: 0.875rem;
+  }
+
+  @media (min-width: 768px) {
+    h6 {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h6 {
+      font-size: 1.25rem;
+    }
+  }
 
   p {
     color: var(--color-secondary);
-    font-size: 1rem; /* text-base */
+    font-size: 1rem;
   }
 }
 
-/* print styles unchanged */
+/* print styles */
 @media print {
-  body { background: white !important; color: black !important; }
-  header, footer, .navbar, .no-print { display: none !important; }
-  main { padding: 0; margin: 0; width: 100%; }
-  * { box-shadow: none !important; background: transparent !important; }
-  html, body { height: auto; overflow: visible; }
-  .hero-section{ padding-top: 35px; }
-  .break-page { break-before: page; page-break-before: always; }
+  body { 
+    background: white !important; 
+    color: black !important; 
+  }
+  header, footer, .navbar, .no-print { 
+    display: none !important; 
+  }
+  main { 
+    padding: 0; 
+    margin: 0; 
+    width: 100%; 
+  }
+  * { 
+    box-shadow: none !important; 
+    background: transparent !important; 
+  }
+  html, body { 
+    height: auto; 
+    overflow: visible; 
+  }
+  .hero-section { 
+    padding-top: 35px; 
+  }
+  .break-page { 
+    break-before: page; 
+    page-break-before: always; 
+  }
 }

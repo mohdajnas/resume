@@ -24,7 +24,7 @@ const EducationSkills = () => {
   return (
     <section>
       <div className="border-t border-softGray overflow-hidden">
-        <div className="container relative z-10">
+        <div className="container sm:px-7 relative z-10">
           <Image
             src={getImgPath(
               "/images/home/education-skill/edu-skill-vector.svg"

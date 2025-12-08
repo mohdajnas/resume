@@ -269,7 +269,7 @@ const Contact = () => {
 
   return (
     <section className="no-print">
-      <div className="container">
+      <div className="container sm:px-7">
         <div className="pt-16 md:pt-32 pb-20">
           <div className="flex items-center justify-between gap-2 border-b border-black pb-7 mb-9 md:mb-16">
             <h2>Contact Me</h2>

@@ -25,7 +25,7 @@ const ContactBar = () => {
   return (
     <section>
       <div className="border-t border-softGray">
-        <div className="container">
+        <div className="container sm:px-7">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-6 md:py-7">
             {/* Contact Items */}
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-1.5 md:gap-5 lg:gap-11">
