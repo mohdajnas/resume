@@ -3,18 +3,18 @@ import React from 'react';
 const ExperienceSec = () => {
     const experiences = [
         {
-            year: "2023",
-            title: "AI Marketing Lead",
-            company: "www.adtech@mesce.ac.in",
+            year: "2025+",
+            title: "AI Engineer",
+            company: "www.zoftcares.com",
             type: "Fulltime",
-            description: "Led marketing and branding initiatives for AI and tech-focused student events. Designed outreach campaigns that increased engagement and strengthened community presence."
+            description: "Developed and deployed LLM-based chatbots and scalable AI services using RabbitMQ and RESTful APIs. Collaborated with team members to optimize model performance and deliver production-ready AI solutions."
         },
-        {
-            year: "2024",
-            title: "AI Engineer Intern",
-            company: "www.camerininnovate.com",
-            type: "Remote",
-            description: "Built AI-driven chatbot and LLM modules for Hospital Information Systems. Automated patient data workflows and assisted in deploying and testing AI models in healthcare environments."
+                {
+            year: "2025",
+            title: "Junior AI Engineer",
+            company: "www.zoftcares.com",
+            type: "Fulltime",
+            description: "Developed and deployed LLM-based chatbots and scalable AI services using RabbitMQ and RESTful APIs. Collaborated with team members to optimize model performance and deliver production-ready AI solutions."
         },
         {
             year: "2025",
@@ -24,11 +24,18 @@ const ExperienceSec = () => {
             description: "Improved real-time computer vision models for workplace hazard detection. Integrated AI components into safety systems to enhance accuracy and reliability."
         },
         {
-            year: "2025+",
-            title: "Junior AI Engineer",
-            company: "www.zoftcares.com",
+            year: "2024",
+            title: "AI Engineer Intern",
+            company: "www.camerininnovate.com",
+            type: "Remote",
+            description: "Built AI-driven chatbot and LLM modules for Hospital Information Systems. Automated patient data workflows and assisted in deploying and testing AI models in healthcare environments."
+        },
+        {
+            year: "2023",
+            title: "AI Marketing Lead",
+            company: "www.adtech@mesce.ac.in",
             type: "Fulltime",
-            description: "Developed and deployed LLM-based chatbots and scalable AI services using RabbitMQ and RESTful APIs. Collaborated with team members to optimize model performance and deliver production-ready AI solutions."
+            description: "Led marketing and branding initiatives for AI and tech-focused student events. Designed outreach campaigns that increased engagement and strengthened community presence."
         }
     ];
 
