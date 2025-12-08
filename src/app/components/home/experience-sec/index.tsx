@@ -4,38 +4,38 @@ const ExperienceSec = () => {
     const experiences = [
         {
             year: "2025+",
-            title: "AI Engineer",
-            company: "www.zoftcares.com",
-            type: "Fulltime",
+            title: "December - Present",
+            company: "AI Engineer",
+            type: "www.zoftcares.com",
             description: "Devoloped, build, and deployed scalable AI-driven solutions across NLP, computer vision, and generative AI. Worked on end-to-end development of AI products — from model experimentation to production deployment."
         },
         {
             year: "2025",
-            title: "June-December\nJunior AI Engineer",
-            company: "www.zoftcares.com",
-            type: "Fulltime",
+            title: "June - December",
+            company: "Junior AI Engineer",
+            type: "www.zoftcares.com",
             description: "Developed and deployed LLM-based chatbots and scalable AI services using RabbitMQ and RESTful APIs. Collaborated with team members to optimize model performance and deliver production-ready AI solutions."
         },
         {
             year: "2025",
-            title: "AI Developer Intern",
-            company: "www.zoftcares.com",
-            type: "Fulltime",
+            title: "February - June",
+            company: "AI Developer Intern",
+            type: "www.zoftcares.com",
             description: "Improved real-time computer vision models for workplace hazard detection. Integrated AI components into safety systems to enhance accuracy and reliability."
         },
         {
             year: "2024",
-            title: "AI Engineer Intern",
-            company: "www.camerininnovate.com",
-            type: "Remote",
+            title: "July - August",
+            company: "AI Engineer Intern",
+            type: "www.camerininnovate.com",
             description: "Built AI-driven chatbot and LLM modules for Hospital Information Systems. Automated patient data workflows and assisted in deploying and testing AI models in healthcare environments."
         },
 
         {
-            year: "2023 - 2024",
-            title: "AI Marketing Lead",
-            company: "www.adtech@mesce.ac.in",
-            type: "Fulltime",
+            year: "2023 - 2025",
+            title: "June - May",
+            company: "AI Marketing Lead",
+            type: "www.adtech.mesce.ac.in",
             description: "Led marketing and branding initiatives for AI and tech-focused student events. Designed outreach campaigns that increased engagement and strengthened community presence."
         }
 
