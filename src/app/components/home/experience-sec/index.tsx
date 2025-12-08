@@ -3,7 +3,7 @@ import React from 'react';
 const ExperienceSec = () => {
     const experiences = [
         {
-            year: "2025",
+            year: "2025+",
             title: "AI Engineer",
             company: "www.zoftcares.com",
             type: "Fulltime",
@@ -11,7 +11,7 @@ const ExperienceSec = () => {
         },
         {
             year: "2025",
-            title: "Junior AI Engineer",
+            title: "June-December\nJunior AI Engineer",
             company: "www.zoftcares.com",
             type: "Fulltime",
             description: "Developed and deployed LLM-based chatbots and scalable AI services using RabbitMQ and RESTful APIs. Collaborated with team members to optimize model performance and deliver production-ready AI solutions."
@@ -32,7 +32,7 @@ const ExperienceSec = () => {
         },
 
         {
-            year: "2023",
+            year: "2023 - 2024",
             title: "AI Marketing Lead",
             company: "www.adtech@mesce.ac.in",
             type: "Fulltime",
